@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Client Progress Tracker</h1>
+        <form id="progress-form">
+            <label for="clientName">Client Name:</label>
+            <input type="text" id="clientName" class="input-field" placeholder="Enter client name" required>
+
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" class="input-field" min="1" placeholder="Enter weight" required>
+
+            <label for="measurements">Body Measurements (cm):</label>
+            <input type="text" id="measurements" class="input-field" placeholder="Enter body measurements" required>
+
+            <label for="workout">Workout Performance:</label>
+            <input type="text" id="workout" class="input-field" placeholder="Enter workout performance details" required>
+
+            <button type="submit" class="submit-btn">Generate Report</button>
+        </form>
+
+        <div class="report-section" id="report-section" style="display:none;">
+            <h2>Progress Report</h2>
+            <p id="client-insights"></p>
+            <p id="next-steps"></p>
+
+            <!-- Button to generate and download the report -->
+            <button id="generate-report" type="button" class="submit-btn">Download Report</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
